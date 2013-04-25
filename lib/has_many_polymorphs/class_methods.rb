@@ -193,6 +193,8 @@ Be aware, however, that <tt>NULL != 'Spot'</tt> returns <tt>false</tt> due to SQ
         reflection = create_has_many_polymorphs_reflection(association_id, options, &extension)
         # puts "Created reflection #{reflection.inspect}"
         # configure_dependency_for_has_many(reflection)
+        _logger_warn "DEPRECATION WARNING: YO JK LOOK HERE!!!!"
+        puts "Ass"
         collection_reader_method(reflection, PolymorphicAssociation)
       end
 
