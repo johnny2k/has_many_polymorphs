@@ -193,9 +193,11 @@ Be aware, however, that <tt>NULL != 'Spot'</tt> returns <tt>false</tt> due to SQ
         reflection = create_has_many_polymorphs_reflection(association_id, options, &extension)
         # puts "Created reflection #{reflection.inspect}"
         # configure_dependency_for_has_many(reflection)
-        _logger_warn "DEPRECATION WARNING: YO JK LOOK HERE!!!!"
-        puts "Ass"
-        collection_reader_method(reflection, PolymorphicAssociation)
+        
+        # This method doesn't exist in Rails 3.1 and I can't find a suitable replacement. 
+        # Commenting it out prevents errors and allows for queries but I doubt we'll get the desired results.
+        # collection_reader_method(reflection, PolymorphicAssociation)
+        # JK TODO
       end
 
       # Composed method that assigns option defaults,  builds the reflection
